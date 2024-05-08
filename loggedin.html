@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dopperdopjes</title>
+</head>
+<body>
+    <h1>JAAAA! </h1>
+    <script>
+        // Get the initial date in milliseconds
+        var initialDate = new Date('2024-05-08').getTime();
+    
+        // Calculate the difference in milliseconds between the initial date and the current date
+        var currentDate = new Date().getTime();
+        var timeDifference = currentDate - initialDate;
+    
+        // Calculate the number of days from the initial date
+        var daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    
+        // Display the number of days on the webpage
+        document.write("<h2>Hier zijn al mijn " + daysDifference + " dopjes!</h2>");
+        
+        for (var i = 0; i < daysDifference; i++) {
+          document.write("<img src='dopperdopje.jpeg' alt='dopperdopje'>");
+         }
+      </script>
+</body>
+</html>

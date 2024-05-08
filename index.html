@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dopperdopjes</title>
+    <style>
+        p.underimg{
+            clear: left;
+        }
+    </style>
+      <script>
+        function checkPassword() {
+          var enteredPassword = document.getElementById("password").value;
+    
+          // Replace 'correctPassword' with the actual correct password
+          var correctPassword = "Henk";
+    
+          if (enteredPassword === correctPassword) {
+            window.location.href = "loggedin.html";
+          } else {
+            alert("FOUT WACHTWOORD. JIJ KOMT ECHT NOOIT AAN MIJN DOPPERDOPJES");
+          }
+        }
+      </script>
+</head>
+<body>
+    <h1>Dopperdopjes van Stan!</h1>
+    <img src="dopperdopje.jpeg" alt="Dopperdopje">
+    <p class="underimg">Ik heb veel dopperdopjes</p>
+    <p>Iedere dag spaar ik er telkens meer!</p>
+    <script>
+        var initialDate = new Date('2024-05-08').getTime();
+        var currentDate = new Date().getTime();
+        var timeDifference = currentDate - initialDate;
+        var daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        document.write("<h2>Ik heb er nu al: " + daysDifference + "</h2>");
+      </script>
+      <p>Maar sommige mensen willen inbreken en mijn dopjes stelen!</p>
+      <p>Gelukkig heb ik mijn dopjes beveiligd met een super geheim wachtwoord!:</p>
+      <form onsubmit="checkPassword(); return false;">
+        <input type="password" id="password" placeholder="Wachtwoord">
+        <input type="submit" value="Submit">
+      </form>
+</body>
+</html>
